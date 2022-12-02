@@ -37,7 +37,7 @@ torch.manual_seed(seed)
 if cuda:
     torch.cuda.manual_seed(seed)
 
-kwargs = {'num_workers': 0, 'pin_memory': True} if cuda else {}
+kwargs = {'num_workers': 8, 'pin_memory': True} if cuda else {}
 
 source1_loader = data_loader.load_training(root_path, source1_name, batch_size, kwargs , None)
 source2_loader = data_loader.load_training(root_path, source2_name, batch_size, kwargs , None)
